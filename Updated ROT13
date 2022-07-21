@@ -1,0 +1,32 @@
+UPPER_LETTERS = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'
+LOWER_LETTERS = 'abcdefghijklmnopqrstuvwxyz'
+ 
+print('ROT13 Cipher, by FIONN KELLEHER, FINN.KELLEHER@QUAKERSOFTWARE.ORG')
+print()
+ 
+while True:  # Main program loop.
+     print('Enter a message to encrypt/decrypt (or QUIT):')
+     message = input('> ')
+ 
+     if message.upper() == 'QUIT':
+         break  # Break out of the main program loop.
+ 
+     translated = ''
+     for character in message:
+         if character.isupper():
+             transCharIndex = (UPPER_LETTERS.find(character) + 13) % 26
+             translated += UPPER_LETTERS[transCharIndex]
+         elif character.islower():
+             transCharIndex = (LOWER_LETTERS.find(character) + 13) % 26
+             translated += LOWER_LETTERS[transCharIndex]
+         else:
+            # Concatenate the character untranslated.
+             translated += character
+
+     print('The translated message is:')
+     print(translated)
+     print()
+
+     pyperclip.copy(translated)
+     print('(Copied to clipboard.)')
+    
