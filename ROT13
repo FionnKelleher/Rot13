@@ -10,7 +10,7 @@
  UPPER_LETTERS = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'
  LOWER_LETTERS = 'abcdefghijklmnopqrstuvwxyz'
  
- print('ROT13 Cipher, by Al Sweigart al@inventwithpython.com')
+ print('ROT13 Cipher, by Fionn Kelleher FINN.KELLEHER@QUAKERSOFTWARE.COM')
  print()
  
  while True:  # Main program loop.
